@@ -19,12 +19,11 @@ func main() {
 	// fmt.Println(twopointers.ThreeSum([]int{-1, 0, 1, 2, -1, -4}))
 	// fmt.Println(twopointers.ThreeSum([]int{0, 0, 0, 0}))
 	stack := stack.NewStack[string]()
-	fmt.Println("Current stack length: ", stack.GetStackSize())
-	stack.Push("_)_")
-	stack.Push("One More")
-	stack.Push("3rd El")
+	stack.Push("1. One")
+	stack.Push("2.Two")
+	stack.Push("3. Three")
 	fmt.Println(stack)
 	stack.Pop()
-	fmt.Println("Current stack length: ", stack.GetStackSize())
+	fmt.Println("Stack Size:", stack.GetStackSize())
 
 }

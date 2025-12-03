@@ -27,13 +27,8 @@ func (s *Stack[T]) Push(value T) {
 
 func (s *Stack[T]) Pop() (T, bool) {
 	last := len(s.items) - 1
-	newSlice := s.items[0:last]
-	lastEl := s.items[last:]
-
-	if lastEl != nil {
-		s.items = newSlice
-		return s.items[last], true
-	} else {
-		return s.items[last], false
-	}
+	rmEl := s.items[last]
+	stackNew := s.items[:last]
+	s.items = stackNew
+	return rmEl, true
 }
