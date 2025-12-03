@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	twopointers "github.com/viktorHadzh/goNeetCode-Basics/twoPointers"
+	"github.com/viktorHadzh/goNeetCode-Basics/stack"
 )
 
 // lowercase var => private
@@ -17,6 +17,14 @@ func main() {
 	// fmt.Println(twopointers.TwoSum([]int{1, 2, 3, 4}, 3))
 	// fmt.Println(twopointers.IsPalindrome2("tab a cat"))
 	// fmt.Println(twopointers.ThreeSum([]int{-1, 0, 1, 2, -1, -4}))
-	fmt.Println(twopointers.ThreeSum([]int{0, 0, 0, 0}))
+	// fmt.Println(twopointers.ThreeSum([]int{0, 0, 0, 0}))
+	stack := stack.NewStack[string]()
+	fmt.Println("Current stack length: ", stack.GetStackSize())
+	stack.Push("_)_")
+	stack.Push("One More")
+	stack.Push("3rd El")
+	fmt.Println(stack)
+	stack.Pop()
+	fmt.Println("Current stack length: ", stack.GetStackSize())
 
 }
