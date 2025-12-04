@@ -23,7 +23,12 @@ func main() {
 	stack.Push("2.Two")
 	stack.Push("3. Three")
 	fmt.Println(stack)
-	stack.Pop()
+	v, ok := stack.Pop()
+	if !ok {
+		return
+	} else {
+		fmt.Println("Removing: ", v)
+	}
 	fmt.Println("Stack Size:", stack.GetStackSize())
 
 }

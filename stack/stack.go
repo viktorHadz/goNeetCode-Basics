@@ -25,10 +25,17 @@ func (s *Stack[T]) Push(value T) {
 	s.items = append(s.items, value)
 }
 
+// Removes last elemet from stack and return false if stack empty
 func (s *Stack[T]) Pop() (T, bool) {
-	last := len(s.items) - 1
-	rmEl := s.items[last]
-	stackNew := s.items[:last]
-	s.items = stackNew
-	return rmEl, true
+	if len(s.items) == 0 {
+		var zero T
+		return zero, false
+	}
+
+	lastIdx := len(s.items) - 1
+	v := s.items[lastIdx]
+
+	s.items = s.items[:lastIdx]
+
+	return v, true
 }
