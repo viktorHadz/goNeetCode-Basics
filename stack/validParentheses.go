@@ -35,22 +35,17 @@ func IsValidParenthesis(s string) bool {
 		return false
 	}
 
-	open := NewStack[string]()
-	closed := NewStack[string]()
-	for _, v := range s {
-		if len(s)%2 != 0 {
-			return false
-		}
-		val := string(v)
-		if val == "(" || val == "{" || val == "[" {
-			open.Push(val)
-		}
-		if val == ")" || val == "}" || val == "]" {
-			closed.Push(val)
-		}
-		// get each stacks last items compare and pop if they are the same
+	pairs := map[byte]byte{
+		'(': ')', '{': '}', '[': ']',
 	}
-	fmt.Println("Open: ", open)
-	fmt.Println("Closed: ", closed)
-	return true
+	stack := []byte{}
+	for i := 0; i < len(s); i++ {
+		ch := s[i]
+		switch ch {
+		case '(', '{', '[':
+			stack = append(stack, ch)
+		case ')', '}', ']':
+			stack = stack[:ch]
+		}
+	}
 }
