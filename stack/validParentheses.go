@@ -1,6 +1,8 @@
 package stack
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 1. Make 2 stacks => 1. Open 2. Closed
 // 2. Define accepted symbols
@@ -33,35 +35,20 @@ func IsValidParenthesis(s string) bool {
 		return false
 	}
 
-	open := []string{}
-	closed := []string{}
-
-	allowed := map[string]bool{
-		"(": true, "{": true, "[": true,
-		")": true, "}": true, "]": true,
-	}
-	allowedOpen := map[int]string{
-		0: "(", 1: "{", 2: "[",
-	}
-	allowedClosed := map[int]string{
-		0: ")", 1: "}", 2: "}",
-	}
-
+	open := NewStack[string]()
+	closed := NewStack[string]()
 	for _, v := range s {
-		val := string(v)
-		fmt.Printf("Val %v, \n", val)
-
-		if !allowed[val] {
+		if len(s)%2 != 0 {
 			return false
 		}
-
-		if allowedOpen[0] == val || allowedOpen[1] == val || allowedOpen[2] == val {
-			open = append(open, val)
+		val := string(v)
+		if val == "(" || val == "{" || val == "[" {
+			open.Push(val)
 		}
-		if allowedClosed[0] == val || allowedClosed[1] == val || allowedClosed[2] == val {
-			closed = append(closed, val)
+		if val == ")" || val == "}" || val == "]" {
+			closed.Push(val)
 		}
-
+		// get each stacks last items compare and pop if they are the same
 	}
 	fmt.Println("Open: ", open)
 	fmt.Println("Closed: ", closed)

@@ -39,3 +39,16 @@ func (s *Stack[T]) Pop() (T, bool) {
 
 	return v, true
 }
+
+// Return top element of stack
+func (s *Stack[T]) GetLast() (T, bool) {
+	if len(s.items) == 0 {
+		var zero T
+		return zero, false
+	}
+
+	lastIdx := len(s.items) - 1
+	v := s.items[lastIdx]
+
+	return v, true
+}
