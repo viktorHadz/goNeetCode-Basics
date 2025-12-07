@@ -18,7 +18,7 @@ func main() {
 	// fmt.Println(twopointers.IsPalindrome2("tab a cat"))
 	// fmt.Println(twopointers.ThreeSum([]int{-1, 0, 1, 2, -1, -4}))
 	// fmt.Println(twopointers.ThreeSum([]int{0, 0, 0, 0}))
-	fmt.Println(stack.IsValidParenthesis("([{}])"))
+	fmt.Println(stack.IsValidParenthesis("(){}}{"))
 
 	// stack := stack.NewStack[string]()
 	// stack.Push("1. One")
