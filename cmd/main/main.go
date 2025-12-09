@@ -7,7 +7,8 @@ import (
 // lowercase var => private
 // uppercase var => public
 func main() {
-	binarysearch.Search([]int{-1, 0, 2, 4, 6, 8}, 3)
+	binarysearch.SearchMatrix([][]int{{1, 2, 4, 8}, {10, 11, 12, 13}, {14, 20, 30, 40}}, 10)
+	// binarysearch.Search([]int{-1, 0, 2, 4, 6, 8}, 3)
 
 	// --- Reversed order. New code goes above
 	// fmt.Println(arrHash.HasDuplicate([]int{1, 2, 3, 3}))
