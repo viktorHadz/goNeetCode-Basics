@@ -1,25 +1,19 @@
 package slidingwindow
 
-import (
-	"fmt"
-	"slices"
-)
+import "fmt"
 
+// Example {10, 1, 5, 6, 7, 1}
 func MaxProfit(prices []int) int {
-	// given an array of ints
-	// where each int is the price of the coin on that day
-	// do: have to buy/sell so that i make profit
-
-	// ok so the idea is buy low sell high
-	// Make 2 pointers one for start the other for finish
-	// If end is
-	fmt.Println("Prices: ", prices)
-	slices.Sort(prices)
-	fmt.Println("Sorted: ", prices)
-	s := 0
-	e := len(prices) - 1
-	for i:=0; i <= len(prices); i++ {
-		
+	p1 := 0
+	p2 := len(prices) - 1
+	answer := 0
+	for p1 < p2 {
+		if prices[p1] > prices[p2] {
+			p1++
+		} else {
+			p2--
+		}
 	}
-	return 1
+	fmt.Println("Answer: ", answer)
+	return answer
 }

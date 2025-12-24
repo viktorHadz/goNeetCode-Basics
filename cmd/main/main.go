@@ -1,14 +1,12 @@
 package main
 
-import (
-	nonNeet "github.com/viktorHadzh/goNeetCode-Basics/nonNeet"
-)
+import slidingwindow "github.com/viktorHadzh/goNeetCode-Basics/slidingWindow"
 
 // lowercase var => private
 // uppercase var => public
 func main() {
-	nonNeet.RomanToInt("XLVIII")
-	// slidingwindow.MaxProfit([]int{10, 1, 5, 6, 7, 1})
+	// nonNeet.RomanToInt("XLVIII")
+	slidingwindow.MaxProfit([]int{10, 1, 5, 6, 7, 1})
 	// binarysearch.SearchMatrix([][]int{{1, 2, 4, 8}, {10, 11, 12, 13}, {14, 20, 30, 40}}, 10)
 	// binarysearch.Search([]int{-1, 0, 2, 4, 6, 8}, 3)
 
