@@ -2,32 +2,22 @@ package slidingwindow
 
 import "fmt"
 
-// Example {10, 1, 5, 6, 7, 1}
+// Example: 10, 1, 5, 10, 6, 7, 1
 func MaxProfit(prices []int) int {
-	answer := 0
-	low := 0
-	high := 0
+	l, r := 0, 1 // l==buy, r==sell 
+	maxProfit := 0
 
-	for i := 0; i+1 < len(prices); i++ {
-		p1 := prices[i]
-		p2 := prices[i+1]
-
-		if p1 > p2 {
-			low = p2
-			fmt.Println("Low new val: ", low)
+	for r < len(prices) {
+		if prices[l] < prices[r] {
+			profit := prices[r] - prices[l]
+			if profit>maxProfit {
+				maxProfit = profit
+			}
+		} else {
+			l = r
 		}
-		if p1 < p2 {
-			high = p2
-			fmt.Println("High new val: ", high)
-		}
-
-		if high > low {
-			answer = high - low
-		}
-
-		fmt.Printf("Start: %v End: %v \n", p1, p2)
+		fmt.Printf("buy: %v sell: %v, maxProfit: %v\n", prices[l],prices[r], maxProfit)
+		r+=1
 	}
-
-	fmt.Println("Answer: ", answer)
-	return answer
+	return maxProfit
 }
