@@ -2,7 +2,11 @@ package slidingwindow
 
 import "fmt"
 
-// Example: 10, 1, 5, 10, 6, 7, 1
+// Prices: {10, 1, 5, 10, 6, 7, 1}
+// l = 2
+// r = 3
+// 1. prices[l] = 10 prices[r] = 1
+// 2. prices[l] = ? prices[r] = 5
 func MaxProfit(prices []int) int {
 	l, r := 0, 1 // l==buy, r==sell 
 	maxProfit := 0
