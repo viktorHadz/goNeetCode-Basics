@@ -1,12 +1,35 @@
 package main
 
-import slidingwindow "github.com/viktorHadzh/goNeetCode-Basics/slidingWindow"
+import (
+	// "fmt"
+
+	"fmt"
+
+	slidingWin "github.com/viktorHadzh/goNeetCode-Basics/slidingWindow"
+)
 
 // lowercase var => private
 // uppercase var => public
 func main() {
+	// text := "Orfata"
+	// var age int
+
+	// fmt.Println("Please enter your age: ")
+	// fmt.Scan(&age)
+
+	// if age < 18 {
+	// 	fmt.Println("Youre not old enough. Come back later kid!")
+	// } else if age > 65 {
+	// 	fmt.Println("Screw you grandpa!")
+	// }else {
+	// 	fmt.Println("You may proceed to fuck hooker")
+	// }
+
+	slidingWin.LengthOfLongestSubstring("zxyzxyz")
+	fmt.Println(
+		slidingWin.MaxSumOfK([]int{5, 2, 3, 89, 23, 45, 99}, 3))
 	// nonNeet.RomanToInt("XLVIII")
-	slidingwindow.MaxProfit([]int{7,1,5,3,6,4})
+	// slidingWin.MaxProfit([]int{7,1,5,3,6,4})
 	// binarysearch.SearchMatrix([][]int{{1, 2, 4, 8}, {10, 11, 12, 13}, {14, 20, 30, 40}}, 10)
 	// binarysearch.Search([]int{-1, 0, 2, 4, 6, 8}, 3)
 
