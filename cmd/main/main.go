@@ -1,12 +1,12 @@
 package main
 
 import (
-	// "fmt"
-
 	"fmt"
 
-	slidingWin "github.com/viktorHadzh/goNeetCode-Basics/slidingWindow"
+	nonneet "github.com/viktorHadzh/goNeetCode-Basics/nonNeet"
 )
+
+// "fmt"
 
 // lowercase var => private
 // uppercase var => public
@@ -25,14 +25,14 @@ func main() {
 	// 	fmt.Println("You may proceed to fuck hooker")
 	// }
 
-	slidingWin.LengthOfLongestSubstring("zxyzxyz")
-	fmt.Println(
-		"MaxOfK: ",
-		slidingWin.MaxSumOfK([]int{5, 2, 3, 89, 23, 45, 99}, 3),
-		"AverageOfSubarrays: ",
-		slidingWin.AverageOfSubarrays([]int{5, 2, 3, 89, 23, 45, 99}, 2),
-	)
-	// nonNeet.RomanToInt("XLVIII")
+	// slidingWin.LengthOfLongestSubstring("zxyzxyz")
+	// fmt.Println(
+	// 	"MaxOfK: ",
+	// 	slidingWin.MaxSumOfK([]int{5, 2, 3, 89, 23, 45, 99}, 3),
+	// 	"AverageOfSubarrays: ",
+	// 	slidingWin.AverageOfSubarrays([]int{5, 2, 3, 89, 23, 45, 99}, 2),
+	// )
+	fmt.Println("Roman to int answer:", nonneet.RomanToInt("XLVII"))
 	// slidingWin.MaxProfit([]int{7,1,5,3,6,4})
 	// binarysearch.SearchMatrix([][]int{{1, 2, 4, 8}, {10, 11, 12, 13}, {14, 20, 30, 40}}, 10)
 	// binarysearch.Search([]int{-1, 0, 2, 4, 6, 8}, 3)
