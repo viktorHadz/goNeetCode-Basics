@@ -27,7 +27,11 @@ func main() {
 
 	slidingWin.LengthOfLongestSubstring("zxyzxyz")
 	fmt.Println(
-		slidingWin.MaxSumOfK([]int{5, 2, 3, 89, 23, 45, 99}, 3))
+		"MaxOfK: ",
+		slidingWin.MaxSumOfK([]int{5, 2, 3, 89, 23, 45, 99}, 3),
+		"AverageOfSubarrays: ",
+		slidingWin.AverageOfSubarrays([]int{5, 2, 3, 89, 23, 45, 99}, 2),
+	)
 	// nonNeet.RomanToInt("XLVIII")
 	// slidingWin.MaxProfit([]int{7,1,5,3,6,4})
 	// binarysearch.SearchMatrix([][]int{{1, 2, 4, 8}, {10, 11, 12, 13}, {14, 20, 30, 40}}, 10)
